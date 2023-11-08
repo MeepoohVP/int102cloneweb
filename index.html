@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nasa</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="Banner">
+      <div class="banner">
+        <p class="margin-0">
+          <strong>Welcome to the new NASA website.</strong> We’re working to
+          continuously improve your web experience. If you don't find what you
+          are looking for,
+          <a
+            href="https://touchpoints.app.cloud.gov/touchpoints/a1b765fc/submit"
+            >give feedback</a
+          >.
+        </p>
+      </div>
+    </div>
+    <header class="Bar">
+      <div class="toggle-bar">
+        <button onclick="barToggle()">
+          <div class="menu-toggle">
+            <div class="menu-toggle-top"></div>
+            <div class="menu-toggle-middle"></div>
+            <div class="menu-toggle-bottom"></div>
+          </div>
+        </button>
+      </div>
+      <div class="logo">
+        <a href="https://www.nasa.gov"><img src="/image/nasa-logo.svg" /></a>
+      </div>
+      <div class="search">
+        <button onclick="togglePop()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </header>
+    <header class="Menu">
+      <div class="menu">
+        <div class="menu-left">
+          <button class="Explore" onclick="barToggle()">
+            <div class="explore">Explore</div>
+            <div class="drop"><i class="bi bi-chevron-down"></i></div>
+          </button>
+          <input type="search" placeholder="Search..." />
+        </div>
+
+        <div class="logo">
+          <a href="https://www.nasa.gov"><img src="/image/nasa-logo.svg" /></a>
+        </div>
+        <div class="menu-right">
+          <button class="Explore">
+            <div class="explore">News & Event</div>
+            <div class="drop"><i class="bi bi-chevron-down"></i></div>
+          </button>
+          <button class="Explore">
+            <div class="explore">Multimedia</div>
+            <div class="drop"><i class="bi bi-chevron-down"></i></div>
+          </button>
+          <button class="Explore">
+            <div class="explore">Nasa+</div>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="menubar" id="menubar">
+      <div class="linkpage">
+        <ul>
+          <li>
+            <a href="#"
+              ><div>Home</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Missions</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Humans in Space</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Earth & Climate</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>The Solar System</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>The Universe</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Science</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Aeronautics</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Technology</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Leaining Resources</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>About NASA</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Español</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+        </ul>
+        <hr />
+        <ul>
+          <li>
+            <a href="#"
+              ><div>News & Events</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Multimedia</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"><div>NASA+</div></a>
+          </li>
+        </ul>
+      </div>
+      <div class="featured">
+        <h3>Featured</h3>
+        <div class="groupblock">
+          <a href="#"
+            ><div class="block">
+              <div class="pic">
+                <img src="/image/img-0662-1.webp" alt="Keeper" />
+              </div>
+              <div class="min">9 min read</div>
+              <div class="headline">
+                Rita Owens: Keeper of NASA’s Digital Knowledge
+              </div>
+              <span><i class="bi bi-bookmark-fill"></i> article</span
+              ><span>3 days ago</span>
+            </div></a
+          >
+          <a href="#"
+            ><div class="block">
+              <div class="pic">
+                <img src="/image/marscloud.webp" alt="Keeper" />
+              </div>
+              <div class="min">9 min read</div>
+              <div class="headline">
+                Rita Owens: Keeper of NASA’s Digital Knowledge
+              </div>
+              <span><i class="bi bi-bookmark-fill"></i>article</span
+              ><span>3 days ago</span>
+            </div></a
+          >
+          <a href="#"
+            ><div class="block">
+              <div class="pic">
+                <img src="/image/tundra.webp" alt="Keeper" />
+              </div>
+              <div class="min">9 min read</div>
+              <div class="headline">
+                Rita Owens: Keeper of NASA’s Digital Knowledge
+              </div>
+              <span><i class="bi bi-bookmark-fill"></i>article</span
+              ><span>3 days ago</span>
+            </div></a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="search-panel" id="bar">
+      <div class="panel">
+        <form class="formsearch">
+          <i class="fa-solid fa-magnifying-glass"></i
+          ><input placeholder="Search the universe" />
+        </form>
+        <button class="closepanel" onclick="togglePop()">
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </div>
+      <div class="searchlist">
+        <div class="searchcategory">
+          <h2 class="suggest">Suggested Searches</h2>
+          <ul class="category">
+            <li>
+              <a href="#"
+                ><div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >Climate Change
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i></div
+              ></a>
+              <hr />
+            </li>
+            <li>
+              <a href="#"
+                ><div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >Artemis
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i></div
+              ></a>
+              <hr />
+            </li>
+            <li>
+              <a href="#"
+                ><div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >Expedition 64
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i></div
+              ></a>
+              <hr />
+            </li>
+            <li>
+              <a href="#"
+                ><div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >Mars perseverance
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i></div
+              ></a>
+              <hr />
+            </li>
+            <li>
+              <a href="#"
+                ><div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >SpaceX Crew-2
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i></div
+              ></a>
+              <hr />
+            </li>
+            <li>
+              <a href="#"
+                ><div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >International Space Station
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i></div
+              ></a>
+              <hr />
+            </li>
+            <li>
+              <a href="#"
+                ><div>View All Topics A-Z</div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i></div
+              ></a>
+              <hr />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <main class="top4">
+      <div class="grouptop4">
+        <div class="channel">
+          <button><img src="/image/ministation.webp" alt="station" /></button>
+          <button><img src="/image/meteorite.webp" alt="meteorite" /></button>
+          <button><img src="/image/astronaut.webp" alt="astronaut" /></button>
+          <button><img src="/image/toon.webp" alt="women astronaut" /></button>
+          <button><i class="bi bi-caret-right-fill"></i></button>
+        </div>
+        <div class="infonews">
+          <h2 class="topic">Sending New Research to the Space Station</h2>
+          <p class="content">
+            NASA and SpaceX are targeting Nov.9 to launch the company's 29th
+            commercial resupply services mission to the International Space
+            Station.
+          </p>
+          <button class="readnews">Launch Coverage</button>
+        </div>
+      </div>
+      <div class="othernews">
+        <div class="news">
+          <div class="cate-gory">native earth,native sky</div>
+          <a href="" class="namenews"
+            >CRS-29 Payload
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-arrow-up-right-circle-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8zm5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707l-4.096 4.096z"
+                /></svg></span
+          ></a>
+        </div>
+        <div class="news">
+          <div class="cate-gory">the science</div>
+          <a href="#" class="namenews"
+            >Atmospheric Waves Experiiment
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-arrow-up-right-circle-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8zm5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707l-4.096 4.096z"
+                /></svg></span
+          ></a>
+        </div>
+        <div class="news">
+          <div class="cate-gory">the science</div>
+          <a href="#" class="namenews"
+            >ILLUMA-T<span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-arrow-up-right-circle-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8zm5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707l-4.096 4.096z"
+                /></svg></span
+          ></a>
+        </div>
+      </div>
+    </main>
+    <main class="feat-news">
+      <div class="feathead">
+        <h2>Featured News</h2>
+        <a href="#"
+          >More NASA News
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-arrow-up-right-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8zm5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707l-4.096 4.096z"
+              /></svg></span
+        ></a>
+      </div>
+      <div class="groupblogs">
+        <a href="#" class="blog-1 item-1">
+          <div class="content">
+            <div class="content-start">
+              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/>
+              </svg></div>Article
+            </div>
+            <div class="content-end">
+              <div class="min">3 min read</div>
+              <p class="namecontent">
+                Scorching, Seven-Planet System Revealed by New Kepler Exoplanet
+                List
+              </p>
+            </div>
+          </div>
+          <img src="/image/featured-news/kepler.webp" alt="" />
+        </a>
+        <a href="#" class="blog-1 item-2">
+          <div class="content">
+            <div class="content-start">
+              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/>
+              </svg></div>image Article
+            </div>
+            <div class="content-end">
+              <div class="min">2 min read</div>
+              <p class="namecontent">
+                Early Production Continues on Advanced Upper Stage for NASA Moon
+                Rocket
+              </p>
+            </div>
+          </div>
+          <img src="/image/featured-news/production.webp" alt="" />
+        </a>
+        <a href="#" class="blog-1 item-3">
+          <div class="content">
+            <div class="content-start">
+              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/>
+              </svg></div>Article
+            </div>
+            <div class="content-end">
+              <div class="min">3 min read</div>
+              <p class="namecontent">
+                Watch NASA Build Its First Robotic Moon Rover
+              </p>
+            </div>
+          </div>
+          <img src="/image/featured-news/robotic.webp" alt="" />
+        </a>
+        <a href="#" class="blog-1 item-4">
+          <div class="content">
+            <div class="content-start">
+              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/>
+              </svg></div>Article
+            </div>
+            <div class="content-end">
+              <div class="min">4 min read</div>
+              <p class="namecontent">
+                NASA Completes Key Step in Aviation Safety Research
+              </p>
+            </div>
+          </div>
+          <img src="/image/featured-news/safety.webp" alt="" />
+        </a>
+      </div>
+      <div class="otherblog">
+        <div class="otherblog-1">
+          <a href="#" class="blog-2">
+            <img src="/image/featured-news/crs29.webp" alt="" />
+            <div class="content">
+              <div class="min">2 min read</div>
+              <div class="name-content">
+                Native Earth, Native Sky CRS-29 Payload
+              </div>
+              <div class="article-type">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                  <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/>
+                </svg></div>
+                <div>ARTICLE</div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="blog-2">
+            <img src="/image/featured-news/dorado.jpg" alt="" />
+            <div class="content">
+              <div class="min">3 min read</div>
+              <div class="name-content">
+                Hubble Tangos with a Dancer in Dorado
+              </div>
+              <div class="article-type">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                  <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/>
+                </svg></div>
+                <div>ARTICLE</div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="otherblog-2">
+          <a href="#" class="blog-2">
+            <img src="/image/featured-news/jupiter.webp" alt="" />
+            <div class="content">
+              <div class="min">2 min read</div>
+              <div class="name-content">
+                Hubble Provides Unique Ultraviolet View of Jupiter
+              </div>
+              <div class="article-type">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                  <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/>
+                </svg></div>
+                <div>IMAGE ARTICLE</div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="blog-2">
+            <img src="/image/featured-news/helpers.jpg" alt="" />
+            <div class="content">
+              <div class="min">6 min read</div>
+              <div class="name-content">Science in Space: Robotic Helpers</div>
+              <div class="article-type">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                  <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/>
+                </svg></div>
+                <div>ARTICLE</div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+    <main class="feat-story">
+      <div class="content">
+        <h2>NASA Celebrates Richard Danne</h2>
+        <p>
+          Join us virtually at 11:30 a.m. EST on Monday, Nov. 6, for a
+          discussion on the design and cultural significance of the worm
+          logotype with NASA and its creator Richard Danne.
+        </p>
+        <div class="linktoblog">
+          <a href="#"
+            >Watch on NASA TV
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              fill="currentColor"
+              class="bi bi-arrow-up-right-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8zm5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707l-4.096 4.096z"
+              /></svg
+          ></a>
+        </div>
+      </div>
+    </main>
+    <main class="img-of-day">
+      <div class="heading">
+        <h3>today</h3>
+        <h2>Image of The Day</h2>
+      </div>
+      <figure>
+        <button type="download" class="download">
+          <i class="bi bi-download"></i></button
+        ><img src="/image/image-of-day/worm.jpg" alt="" /><a href="#"
+          >View image
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              fill="currentColor"
+              class="bi bi-arrow-up-right-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8zm5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707l-4.096 4.096z"
+              /></svg></span
+        ></a>
+      </figure>
+      <div class="content">
+        <p>NASA’s Worm Logo</p>
+        <p>
+          The NASA Worm Logo sign is unveiled before the ribbon cutting ceremony
+          to open NASA’s Earth Information Center, Wednesday, June 21, 2023, at
+          NASA Headquarters building in Washington.
+        </p>
+        <a href="#"
+          >Browse Image Archive
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              fill="currentColor"
+              class="bi bi-arrow-up-right-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8zm5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707l-4.096 4.096z"
+              /></svg></span
+        ></a>
+      </div>
+    </main>
+    <main class="earth">
+      <div class="content">
+        <h2>Earth Information Center</h2>
+        <p>
+          Discover Earth as NASA sees it. Learn why this information matters to
+          us all.
+        </p>
+        <a href="#"
+          >Explore
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              fill="currentColor"
+              class="bi bi-arrow-up-right-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8zm5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707l-4.096 4.096z"
+              /></svg></span
+        ></a>
+      </div>
+    </main>
+    <main class="feat-news lastest">
+      <div class="feathead">
+        <h2>Lastest News</h2>
+        <a href="#"
+          >More NASA News Releases
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-arrow-up-right-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8zm5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707l-4.096 4.096z"
+              /></svg></span
+        ></a>
+      </div>
+      <div class="groupblogs">
+        <a href="#" class="blog-1 item-1">
+          <div class="content">
+            <div class="content-start">
+              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
+                <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1h-4z"/>
+              </svg></div>news release
+            </div>
+            <div class="content-end">
+              <div class="min">2 min read</div>
+              <p class="namecontent">
+                NASA Invites Media to Bulgaria Artemis Accords Signing Ceremony
+              </p>
+            </div>
+          </div>
+          <img src="/image/lastest-news/artemis.webp" alt="" />
+        </a>
+        <a href="#" class="blog-1 item-2">
+          <div class="content">
+            <div class="content-start">
+              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
+                <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1h-4z"/>
+              </svg></div>news release
+            </div>
+            <div class="content-end">
+              <div class="min">2 min read</div>
+              <p class="namecontent">
+                NASA, International Astronauts to Speak with Tennessee Students
+              </p>
+            </div>
+          </div>
+          <img src="/image/lastest-news/astronaut.webp" alt="" />
+        </a>
+      </div>
+      <div class="otherblog">
+        <div class="otherblog-1">
+          <a href="#" class="blog-2">
+            <img src="/image/lastest-news/worm.webp" alt="" />
+            <div class="content">
+              <div class="min">4 min read</div>
+              <div class="name-content">
+                Worm Designer Receives NASA’s Exceptional Public Achievement
+                Medal
+              </div>
+              <div class="article-type">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
+                  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1h-4z"/>
+                </svg></div>
+                <div>NEWS RELEASE</div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="blog-2">
+            <img src="/image/lastest-news/moon.webp" alt="" />
+            <div class="content">
+              <div class="min">3 min read</div>
+              <div class="name-content">
+                NASA Invites Media to First Astrobotic, ULA Robotic Artemis Moon
+                Launch
+              </div>
+              <div class="article-type">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
+                  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1h-4z"/>
+                </svg></div>
+                <div>NEWS RELEASE</div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="otherblog-2">
+          <a href="#" class="blog-2">
+            <img src="/image/lastest-news/apollo.webp" alt="" />
+            <div class="content">
+              <div class="min">2 min read</div>
+              <div class="name-content">
+                NASA Administrator Remembers Apollo Astronaut Thomas K.
+                Mattingly II
+              </div>
+              <div class="article-type">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
+                  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1h-4z"/>
+                </svg></div>
+                <div>NEWS RELEASE</div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+    <main class="inbox">
+      <div class="content">
+        <h2>Explore the Universe from your Inbox</h2>
+        <p>
+          Stay up-to-date on the latest news from NASA–from Earth to the Moon,
+          the Solar System and beyond.
+        </p>
+        <p>We’ll never share your email address.</p>
+        <a href="#"
+          >Sign Up
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              fill="currentColor"
+              class="bi bi-arrow-up-right-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8zm5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707l-4.096 4.096z"
+              /></svg></span
+        ></a>
+      </div>
+    </main>
+    <main class="more-topic">
+      <div class="heading">
+        <div class="label">keep exploring</div>
+        <h2>Discover More Topics From NASA</h2>
+      </div>
+      <div class="more-blog">
+        <a href="#" class="blog b-1"
+          ><div class="topic">
+            Missions
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right-circle-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                /></svg
+            ></span></div
+        ></a>
+        <a href="#" class="blog b-2"
+          ><div class="topic">
+            Humans In Space
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right-circle-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                /></svg
+            ></span></div
+        ></a>
+        <a href="#" class="blog b-3"
+          ><div class="topic">
+            Native American Heritage Month
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right-circle-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                /></svg
+            ></span></div
+        ></a>
+        <a href="#" class="blog b-4"
+          ><div class="topic">
+            Value Of NASA
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right-circle-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                /></svg
+            ></span></div
+        ></a>
+      </div>
+    </main>
+    <footer>
+      <div class="logo"><img src="/image/nasa-logo.svg" alt="" /></div>
+      <div class="detail">
+        <h3>The National Aeronautics and Space Administration</h3>
+        <p>
+          NASA explores the unknown in air and space, innovates for the benefit
+          of humanity, and inspires the world through discovery.
+        </p>
+        <div class="about"><a href="#">About NASA's Mission</a></div>
+        <a href="#"
+          >Join Us
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+              /></svg></span
+        ></a>
+      </div>
+      <ul class="footermenu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News & Events</a></li>
+        <li><a href="#">Multimedia</a></li>
+        <li><a href="#">NASA TV</a></li>
+        <li><a href="#">Missions</a></li>
+        <li><a href="#">Human in Space</a></li>
+        <li><a href="#">Earth & Climate</a></li>
+        <li><a href="#">The Solar System</a></li>
+        <li><a href="#">The Universe</a></li>
+        <li><a href="#">Science</a></li>
+        <li><a href="#">Aeronautics</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Learning Resources</a></li>
+        <li><a href="#">About NASA</a></li>
+        <li><a href="#">NASA en Español</a></li>
+      </ul>
+      <div class="contact">
+        <h3>Follow NASA</h3>
+        <ul class="contact-icon">
+          <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+        </ul>
+        <div class="more"><a href="#">More NASA Social Accounts</a></div>
+        <div class="letter"><a href="#">NASA Newsletters</a></div>
+    </footer>
+    <script src="/js/active.js"></script>
+  </body>
+</html>
