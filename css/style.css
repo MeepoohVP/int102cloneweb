@@ -154,7 +154,7 @@ body{
 }
 
 .top4{
-    background: url("/image/station.webp") no-repeat;
+    background: url("../image/station.webp") no-repeat;
     background-size: cover;
     position: relative;
     width: 100%;
@@ -406,7 +406,7 @@ body{
     position: relative;
     zoom: 80%;
     background-size: cover;
-    background: url("/image/featured-story/danne.webp") no-repeat center top;
+    background: url("../image/featured-story/danne.webp") no-repeat center top;
     transition: .5s;
     box-shadow: 328px -336px 128px  inset rgba(0, 0, 0, 0.7);
     filter: brightness(80%);
@@ -523,7 +523,7 @@ body{
 
 /* Earth */
 .earth{
-    background: url("/image/explore/Earth.webp") right;
+    background: url("../image/explore/Earth.webp") right;
     background-size: cover;
     position: relative;
     color: white;
@@ -563,7 +563,7 @@ body{
 
 /* inbox */
 .inbox{
-    background: url('/image/inbox/tarantula.webp') center;
+    background: url('../image/inbox/tarantula.webp') center;
     background-size: cover;
     color: #fff;
 }
@@ -634,16 +634,16 @@ body{
 }
 
 .b-1{
-    background: url("/image/more-topic/mission.jpg") center;
+    background: url("../image/more-topic/mission.jpg") center;
 }
 .b-2{
-    background: url("/image/more-topic/hm-in-space.webp") center;
+    background: url("../image/more-topic/hm-in-space.webp") center;
 }
 .b-3{
-    background: url("/image/more-topic/native.webp") center;
+    background: url("../image/more-topic/native.webp") center;
 }
 .b-4{
-    background: url("/image/more-topic/value.jpg") center;
+    background: url("../image/more-topic/value.jpg") center;
 }
 
 .more-blog span{
