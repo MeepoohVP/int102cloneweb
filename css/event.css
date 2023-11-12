@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Public Sans",sans-serif;
+}
+.events{
+    font-family: 'Inter';
+    padding: 0 28px;
+}
+.events-list{
+    margin-top: 32px;
+}
+.event-item{
+    margin-bottom: 48px;
+}
+.event-item > a{
+    position: relative;
+    color: black;
+    text-decoration: none;
+}
+.event-img{
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+.event-img img{
+    position: relative;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+    transition: .5s;
+}
+.event-item:hover img{
+    transform: scale(1.1);
+}
+.event-date{
+    margin-top: 12px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .025rem;
+}
+.event-name{
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 16px;
+}
+.event-type{
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 16px;
+    color: #58585b;
+    font-family: 'Dm Mono';
+    letter-spacing: 2px;
+}
+@media screen and (min-width: 800px) {
+    .events-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .event-item{
+        width: 32.5%;
+    }
+}

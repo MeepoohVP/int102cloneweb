@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/jupiter.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <title>Jupiter</title>
+  </head>
+
+  <body>
+    <header class="Bar">
+      <div class="toggle-bar">
+        <button onclick="barToggle()">
+          <div class="menu-toggle">
+            <div class="menu-toggle-top"></div>
+            <div class="menu-toggle-middle"></div>
+            <div class="menu-toggle-bottom"></div>
+          </div>
+        </button>
+      </div>
+      <div class="logo">
+        <a href="https://www.nasa.gov"><img src="/image/nasa-logo.svg" /></a>
+      </div>
+      <div class="search">
+        <button onclick="togglePop()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </header>
+    <header class="Menu">
+      <div class="menu">
+        <div class="menu-left">
+          <button class="Explore" onclick="barToggle()">
+            <div class="explore">Explore</div>
+            <div class="drop"><i class="bi bi-chevron-down"></i></div>
+          </button>
+          <input type="search" placeholder="Search..." />
+        </div>
+
+        <div class="logo">
+          <a href="https://www.nasa.gov"><img src="/image/nasa-logo.svg" /></a>
+        </div>
+        <div class="menu-right">
+          <button class="Explore">
+            <div class="explore">News & Event</div>
+            <div class="drop"><i class="bi bi-chevron-down"></i></div>
+          </button>
+          <button class="Explore">
+            <div class="explore">Multimedia</div>
+            <div class="drop"><i class="bi bi-chevron-down"></i></div>
+          </button>
+          <button class="Explore">
+            <div class="explore">Nasa+</div>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="menubar" id="menubar">
+      <div class="linkpage">
+        <ul>
+          <li>
+            <a href="#">
+              <div>Home</div>
+              <div><i class="bi bi-chevron-right"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>Missions</div>
+              <div><i class="bi bi-chevron-right"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>Humans in Space</div>
+              <div><i class="bi bi-chevron-right"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>Earth & Climate</div>
+              <div><i class="bi bi-chevron-right"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>The Solar System</div>
+              <div><i class="bi bi-chevron-right"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>The Universe</div>
+              <div><i class="bi bi-chevron-right"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>Science</div>
+              <div><i class="bi bi-chevron-right"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>Aeronautics</div>
+              <div><i class="bi bi-chevron-right"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>Technology</div>
+              <div><i class="bi bi-chevron-right"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>Leaining Resources</div>
+              <div><i class="bi bi-chevron-right"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>About NASA</div>
+              <div><i class="bi bi-chevron-right"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>Español</div>
+              <div><i class="bi bi-chevron-right"></i></div>
+            </a>
+          </li>
+        </ul>
+        <hr />
+        <ul>
+          <li>
+            <a href="#">
+              <div>News & Events</div>
+              <div><i class="bi bi-chevron-right"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>Multimedia</div>
+              <div><i class="bi bi-chevron-right"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>NASA+</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="featured">
+        <h3>Featured</h3>
+        <div class="groupblock">
+          <a href="#">
+            <div class="block">
+              <div class="pic">
+                <img src="/image/img-0662-1.webp" alt="Keeper" />
+              </div>
+              <div class="min">9 min read</div>
+              <div class="headline">
+                Rita Owens: Keeper of NASA’s Digital Knowledge
+              </div>
+              <span><i class="bi bi-bookmark-fill"></i> article</span
+              ><span>3 days ago</span>
+            </div>
+          </a>
+          <a href="#">
+            <div class="block">
+              <div class="pic">
+                <img src="/image/marscloud.webp" alt="Keeper" />
+              </div>
+              <div class="min">9 min read</div>
+              <div class="headline">
+                Rita Owens: Keeper of NASA’s Digital Knowledge
+              </div>
+              <span><i class="bi bi-bookmark-fill"></i>article</span
+              ><span>3 days ago</span>
+            </div>
+          </a>
+          <a href="#">
+            <div class="block">
+              <div class="pic">
+                <img src="/image/tundra.webp" alt="Keeper" />
+              </div>
+              <div class="min">9 min read</div>
+              <div class="headline">
+                Rita Owens: Keeper of NASA’s Digital Knowledge
+              </div>
+              <span><i class="bi bi-bookmark-fill"></i>article</span
+              ><span>3 days ago</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="search-panel" id="bar">
+      <div class="panel">
+        <form class="formsearch">
+          <i class="fa-solid fa-magnifying-glass"></i
+          ><input placeholder="Search the universe" />
+        </form>
+        <button class="closepanel" onclick="togglePop()">
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </div>
+      <div class="searchlist">
+        <div class="searchcategory">
+          <h2 class="suggest">Suggested Searches</h2>
+          <ul class="category">
+            <li>
+              <a href="#">
+                <div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >Climate Change
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i>
+                </div>
+              </a>
+              <hr />
+            </li>
+            <li>
+              <a href="#">
+                <div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >Artemis
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i>
+                </div>
+              </a>
+              <hr />
+            </li>
+            <li>
+              <a href="#">
+                <div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >Expedition 64
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i>
+                </div>
+              </a>
+              <hr />
+            </li>
+            <li>
+              <a href="#">
+                <div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >Mars perseverance
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i>
+                </div>
+              </a>
+              <hr />
+            </li>
+            <li>
+              <a href="#">
+                <div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >SpaceX Crew-2
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i>
+                </div>
+              </a>
+              <hr />
+            </li>
+            <li>
+              <a href="#">
+                <div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >International Space Station
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i>
+                </div>
+              </a>
+              <hr />
+            </li>
+            <li>
+              <a href="#">
+                <div>View All Topics A-Z</div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i>
+                </div>
+              </a>
+              <hr />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <main class="img-content">
+      <div class="jupiter">
+        <img src="image/image-of-day/jupiter.webp" alt="" />
+      </div>
+      <div class="details">
+        <h1>Jupiter in Ultraviolet</h1>
+        <p>
+          NASA's Hubble Space Telescope reveals an ultraviolet view of Jupiter.
+        </p>
+        <p>
+          Image Credit: NASA, ESA, and M. Wong (University of California -
+          Berkeley); Processing: Gladys Kober (NASA/Catholic University of
+          America)
+        </p>
+        <p>
+          <a href="#"
+            >Read More
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right-circle-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                /></svg></span
+          ></a>
+        </p>
+        <div class="btn">
+          <a href="image/image-of-day/jupiter.webp" download
+            ><button class="download">
+              Download <span><i class="bi bi-download"></i></span></button
+          ></a>
+          <a href="#"
+            ><button class="share">
+              Share <span><i class="bi bi-share-fill"></i></span></button
+          ></a>
+        </div>
+
+        <div class="credit-size">
+          <div class="img-credit">
+            <div>image credit</div>
+            <div>
+              NASA, ESA, and M. Wong (University of California - Berkeley);
+              Processing: Gladys Kober (NASA/Catholic University of America)
+            </div>
+          </div>
+          <div class="img-size">
+            <div>size</div>
+            <div>1328x1285px</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="logo"><img src="/image/nasa-logo.svg" alt="" /></div>
+      <div class="content">
+        <div class="detail">
+          <h3>The National Aeronautics and Space Administration</h3>
+          <p>
+            NASA explores the unknown in air and space, innovates for the
+            benefit of humanity, and inspires the world through discovery.
+          </p>
+          <div class="about"><a href="#">About NASA's Mission</a></div>
+          <a href="#"
+            >Join Us
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right-circle-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                /></svg></span
+          ></a>
+        </div>
+        <ul class="footermenu first">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">News & Events</a></li>
+          <li><a href="#">Multimedia</a></li>
+          <li><a href="#">NASA TV</a></li>
+          <li><a href="#">Missions</a></li>
+          <li><a href="#">Human in Space</a></li>
+          <li><a href="#">Earth & Climate</a></li>
+          <li><a href="#">The Solar System</a></li>
+          <li><a href="#">The Universe</a></li>
+          <li><a href="#">Science</a></li>
+          <li><a href="#">Aeronautics</a></li>
+          <li><a href="#">Technology</a></li>
+          <li><a href="#">Learning Resources</a></li>
+          <li><a href="#">About NASA</a></li>
+          <li><a href="#">NASA en Español</a></li>
+        </ul>
+        <div class="contact">
+          <h3>Follow NASA</h3>
+          <ul class="contact-icon">
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+          <div class="more"><a href="#">More NASA Social Accounts</a></div>
+          <div class="letter"><a href="#">NASA Newsletters</a></div>
+        </div>
+        <ul class="footermenu secondary">
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">For Media</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">FOIA</a></li>
+          <li><a href="#">NO FEAR Act</a></li>
+          <li><a href="#">Office of the IG</a></li>
+          <li><a href="#">Budget & Annual Reports</a></li>
+          <li><a href="#">Agency Financial Reports</a></li>
+          <li><a href="#">Contact NASA</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+        <ul class="credit">
+          <li>
+            <div>Page Last Updated:</div>
+            <div>Nov 09,2023</div>
+          </li>
+          <li>
+            <div>Page Editor:</div>
+            <div>Dacia Massengill</div>
+          </li>
+          <li>
+            <div>Responsible NASA Official:</div>
+            <div>Brian Dunbar</div>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="/js/active.js"></script>
+  </body>
+</html>

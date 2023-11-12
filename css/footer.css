@@ -4,7 +4,9 @@ footer{
     flex-direction: column;
     padding: 0 24px 48px 24px;
 }
-
+ul{
+    list-style: none;
+}
 footer .logo img{
     width: 64px;
     height: auto;

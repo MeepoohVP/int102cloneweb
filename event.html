@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/event.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <title>Events</title>
+  </head>
+  <body>
+    <header class="Bar">
+      <div class="toggle-bar">
+        <button onclick="barToggle()">
+          <div class="menu-toggle">
+            <div class="menu-toggle-top"></div>
+            <div class="menu-toggle-middle"></div>
+            <div class="menu-toggle-bottom"></div>
+          </div>
+        </button>
+      </div>
+      <div class="logo">
+        <a href="https://www.nasa.gov"><img src="/image/nasa-logo.svg" /></a>
+      </div>
+      <div class="search">
+        <button onclick="togglePop()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </header>
+    <header class="Menu">
+      <div class="menu">
+        <div class="menu-left">
+          <button class="Explore" onclick="barToggle()">
+            <div class="explore">Explore</div>
+            <div class="drop"><i class="bi bi-chevron-down"></i></div>
+          </button>
+          <input type="search" placeholder="Search..." />
+        </div>
+
+        <div class="logo">
+          <a href="https://www.nasa.gov"><img src="/image/nasa-logo.svg" /></a>
+        </div>
+        <div class="menu-right">
+          <button class="Explore">
+            <div class="explore">News & Event</div>
+            <div class="drop"><i class="bi bi-chevron-down"></i></div>
+          </button>
+          <button class="Explore">
+            <div class="explore">Multimedia</div>
+            <div class="drop"><i class="bi bi-chevron-down"></i></div>
+          </button>
+          <button class="Explore">
+            <div class="explore">Nasa+</div>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="menubar" id="menubar">
+      <div class="linkpage">
+        <ul>
+          <li>
+            <a href="#"
+              ><div>Home</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Missions</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Humans in Space</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Earth & Climate</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>The Solar System</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>The Universe</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Science</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Aeronautics</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Technology</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Leaining Resources</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>About NASA</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Español</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+        </ul>
+        <hr />
+        <ul>
+          <li>
+            <a href="#"
+              ><div>News & Events</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><div>Multimedia</div>
+              <div><i class="bi bi-chevron-right"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"><div>NASA+</div></a>
+          </li>
+        </ul>
+      </div>
+      <div class="featured">
+        <h3>Featured</h3>
+        <div class="groupblock">
+          <a href="#"
+            ><div class="block">
+              <div class="pic">
+                <img src="/image/img-0662-1.webp" alt="Keeper" />
+              </div>
+              <div class="min">9 min read</div>
+              <div class="headline">
+                Rita Owens: Keeper of NASA’s Digital Knowledge
+              </div>
+              <span><i class="bi bi-bookmark-fill"></i> article</span
+              ><span>3 days ago</span>
+            </div></a
+          >
+          <a href="#"
+            ><div class="block">
+              <div class="pic">
+                <img src="/image/marscloud.webp" alt="Keeper" />
+              </div>
+              <div class="min">9 min read</div>
+              <div class="headline">
+                Rita Owens: Keeper of NASA’s Digital Knowledge
+              </div>
+              <span><i class="bi bi-bookmark-fill"></i>article</span
+              ><span>3 days ago</span>
+            </div></a
+          >
+          <a href="#"
+            ><div class="block">
+              <div class="pic">
+                <img src="/image/tundra.webp" alt="Keeper" />
+              </div>
+              <div class="min">9 min read</div>
+              <div class="headline">
+                Rita Owens: Keeper of NASA’s Digital Knowledge
+              </div>
+              <span><i class="bi bi-bookmark-fill"></i>article</span
+              ><span>3 days ago</span>
+            </div></a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="search-panel" id="bar">
+      <div class="panel">
+        <form class="formsearch">
+          <i class="fa-solid fa-magnifying-glass"></i
+          ><input placeholder="Search the universe" />
+        </form>
+        <button class="closepanel" onclick="togglePop()">
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </div>
+      <div class="searchlist">
+        <div class="searchcategory">
+          <h2 class="suggest">Suggested Searches</h2>
+          <ul class="category">
+            <li>
+              <a href="#"
+                ><div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >Climate Change
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i></div
+              ></a>
+              <hr />
+            </li>
+            <li>
+              <a href="#"
+                ><div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >Artemis
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i></div
+              ></a>
+              <hr />
+            </li>
+            <li>
+              <a href="#"
+                ><div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >Expedition 64
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i></div
+              ></a>
+              <hr />
+            </li>
+            <li>
+              <a href="#"
+                ><div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >Mars perseverance
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i></div
+              ></a>
+              <hr />
+            </li>
+            <li>
+              <a href="#"
+                ><div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >SpaceX Crew-2
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i></div
+              ></a>
+              <hr />
+            </li>
+            <li>
+              <a href="#"
+                ><div>
+                  <span class="magnify"
+                    ><i class="fa-solid fa-magnifying-glass"></i></span
+                  >International Space Station
+                </div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i></div
+              ></a>
+              <hr />
+            </li>
+            <li>
+              <a href="#"
+                ><div>View All Topics A-Z</div>
+                <div class="arrow">
+                  <i class="bi bi-arrow-right-circle-fill"></i></div
+              ></a>
+              <hr />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <main class="events">
+      <h1>Launches & Landings</h1>
+      <div class="events-list">
+        <div class="event-item">
+          <a href="#">
+            <div class="event-img">
+              <img src="image/event/gusto.jpg" alt="" />
+            </div>
+            <div class="event-date">NO EARLIER THAN DECEMBER 2023</div>
+            <div class="event-name">GUSTO</div>
+            <div class="event-type">launch schedule</div>
+          </a>
+        </div>
+        <div class="event-item">
+            <a href="#">
+              <div class="event-img">
+                <img src="image/event/spacex.jpg" alt="" />
+              </div>
+              <div class="event-date">NO EARLIER THAN FEBRUARY 2024</div>
+              <div class="event-name">NASA’s SpaceX Crew-8 Launch</div>
+              <div class="event-type">launch schedule</div>
+            </a>
+          </div>
+          <div class="event-item">
+            <a href="#">
+              <div class="event-img">
+                <img src="image/event/asthros.jpeg" alt="" />
+              </div>
+              <div class="event-date">NO EARLIER THAN DECEMBER 2023</div>
+              <div class="event-name">ASTHROS</div>
+              <div class="event-type">launch schedule</div>
+            </a>
+          </div>
+          <div class="event-item">
+            <a href="#">
+              <div class="event-img">
+                <img src="image/event/spacex.jpg" alt="" />
+              </div>
+              <div class="event-date">NO EARLIER THAN FEBRUARY 2024</div>
+              <div class="event-name">NASA’s SpaceX Crew-8 Launch</div>
+              <div class="event-type">launch schedule</div>
+            </a>
+          </div>
+          <div class="event-item">
+            <a href="#">
+              <div class="event-img">
+                <img src="image/event/asthros.jpeg" alt="" />
+              </div>
+              <div class="event-date">NO EARLIER THAN DECEMBER 2023</div>
+              <div class="event-name">ASTHROS</div>
+              <div class="event-type">launch schedule</div>
+            </a>
+          </div>
+          <div class="event-item">
+            <a href="#">
+              <div class="event-img">
+                <img src="image/event/spacex.jpg" alt="" />
+              </div>
+              <div class="event-date">NO EARLIER THAN FEBRUARY 2024</div>
+              <div class="event-name">NASA’s SpaceX Crew-8 Launch</div>
+              <div class="event-type">launch schedule</div>
+            </a>
+          </div>
+          <div class="event-item">
+            <a href="#">
+              <div class="event-img">
+                <img src="image/event/asthros.jpeg" alt="" />
+              </div>
+              <div class="event-date">NO EARLIER THAN DECEMBER 2023</div>
+              <div class="event-name">ASTHROS</div>
+              <div class="event-type">launch schedule</div>
+            </a>
+          </div>
+          <div class="event-item">
+            <a href="#">
+              <div class="event-img">
+                <img src="image/event/spacex.jpg" alt="" />
+              </div>
+              <div class="event-date">NO EARLIER THAN FEBRUARY 2024</div>
+              <div class="event-name">NASA’s SpaceX Crew-8 Launch</div>
+              <div class="event-type">launch schedule</div>
+            </a>
+          </div>
+          <div class="event-item">
+            <a href="#">
+              <div class="event-img">
+                <img src="image/event/asthros.jpeg" alt="" />
+              </div>
+              <div class="event-date">NO EARLIER THAN DECEMBER 2023</div>
+              <div class="event-name">ASTHROS</div>
+              <div class="event-type">launch schedule</div>
+            </a>
+          </div>
+          <div class="event-item">
+            <a href="#">
+              <div class="event-img">
+                <img src="image/event/spacex.jpg" alt="" />
+              </div>
+              <div class="event-date">NO EARLIER THAN FEBRUARY 2024</div>
+              <div class="event-name">NASA’s SpaceX Crew-8 Launch</div>
+              <div class="event-type">launch schedule</div>
+            </a>
+          </div>
+          <div class="event-item">
+            <a href="#">
+              <div class="event-img">
+                <img src="image/event/asthros.jpeg" alt="" />
+              </div>
+              <div class="event-date">NO EARLIER THAN DECEMBER 2023</div>
+              <div class="event-name">ASTHROS</div>
+              <div class="event-type">launch schedule</div>
+            </a>
+          </div>
+          <div class="event-item">
+            <a href="#">
+              <div class="event-img">
+                <img src="image/event/spacex.jpg" alt="" />
+              </div>
+              <div class="event-date">NO EARLIER THAN FEBRUARY 2024</div>
+              <div class="event-name">NASA’s SpaceX Crew-8 Launch</div>
+              <div class="event-type">launch schedule</div>
+            </a>
+          </div>
+          <div class="event-item">
+            <a href="#">
+              <div class="event-img">
+                <img src="image/event/asthros.jpeg" alt="" />
+              </div>
+              <div class="event-date">NO EARLIER THAN DECEMBER 2023</div>
+              <div class="event-name">ASTHROS</div>
+              <div class="event-type">launch schedule</div>
+            </a>
+          </div>
+          <div class="event-item">
+            <a href="#">
+              <div class="event-img">
+                <img src="image/event/asthros.jpeg" alt="" />
+              </div>
+              <div class="event-date">NO EARLIER THAN DECEMBER 2023</div>
+              <div class="event-name">ASTHROS</div>
+              <div class="event-type">launch schedule</div>
+            </a>
+          </div>
+          <div class="event-item">
+            <a href="#">
+              <div class="event-img">
+                <img src="image/event/asthros.jpeg" alt="" />
+              </div>
+              <div class="event-date">NO EARLIER THAN DECEMBER 2023</div>
+              <div class="event-name">ASTHROS</div>
+              <div class="event-type">launch schedule</div>
+            </a>
+          </div>
+          <div class="event-item">
+            <a href="#">
+              <div class="event-img">
+                <img src="image/event/asthros.jpeg" alt="" />
+              </div>
+              <div class="event-date">NO EARLIER THAN DECEMBER 2023</div>
+              <div class="event-name">ASTHROS</div>
+              <div class="event-type">launch schedule</div>
+            </a>
+          </div>
+          <div class="event-item">
+            <a href="#">
+              <div class="event-img">
+                <img src="image/event/asthros.jpeg" alt="" />
+              </div>
+              <div class="event-date">NO EARLIER THAN DECEMBER 2023</div>
+              <div class="event-name">ASTHROS</div>
+              <div class="event-type">launch schedule</div>
+            </a>
+          </div>
+          <div class="event-item">
+            <a href="#">
+              <div class="event-img">
+                <img src="image/event/asthros.jpeg" alt="" />
+              </div>
+              <div class="event-date">NO EARLIER THAN DECEMBER 2023</div>
+              <div class="event-name">ASTHROS</div>
+              <div class="event-type">launch schedule</div>
+            </a>
+          </div>
+      </div>
+    </main>
+    <script src="/js/active.js"></script>
+  </body>
+</html>
