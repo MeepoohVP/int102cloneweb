@@ -121,6 +121,9 @@
     border: 1.25px solid white;
     border-radius: 50%;
 }
+.menu-right a{
+    text-decoration: none;
+}
 .menu-right .drop{
     width: 16px;
     height: 16px;

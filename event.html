@@ -31,7 +31,7 @@
         </button>
       </div>
       <div class="logo">
-        <a href="https://www.nasa.gov"><img src="/image/nasa-logo.svg" /></a>
+        <a href="index.html"><img src="/image/nasa-logo.svg" /></a>
       </div>
       <div class="search">
         <button onclick="togglePop()">
@@ -50,20 +50,21 @@
         </div>
 
         <div class="logo">
-          <a href="https://www.nasa.gov"><img src="/image/nasa-logo.svg" /></a>
+          <a href="index.html"><img src="/image/nasa-logo.svg" /></a>
         </div>
         <div class="menu-right">
-          <button class="Explore">
-            <div class="explore">News & Event</div>
-            <div class="drop"><i class="bi bi-chevron-down"></i></div>
-          </button>
-          <button class="Explore">
-            <div class="explore">Multimedia</div>
-            <div class="drop"><i class="bi bi-chevron-down"></i></div>
-          </button>
-          <button class="Explore">
-            <div class="explore">Nasa+</div>
-          </button>
+          <a href="event.html">
+            <button class="Explore">
+              <div class="explore">News & Event</div>
+              <div class="drop"><i class="bi bi-chevron-down"></i></div>
+            </button></a>
+            <a href="#"><button class="Explore">
+              <div class="explore">Multimedia</div>
+              <div class="drop"><i class="bi bi-chevron-down"></i></div>
+            </button></a>
+            <a href="#"><button class="Explore">
+              <div class="explore">Nasa+</div>
+            </button></a>
         </div>
       </div>
     </header>
@@ -307,6 +308,12 @@
     </div>
     <main class="events">
       <h1>Launches & Landings</h1>
+      <div class="select"><div class="filter">Filter Results <div class="iconfilter"><i class="fa-solid fa-chevron-down"></i></div></div>
+    <div class="timezone"><p><b>Timezone</b>:</p>
+    <form action="">
+      <label for="">Select Your Location or Timezone:</label>
+      <select name="" id=""><option value="America">New York</option></select>
+    </form></div></div>
       <div class="events-list">
         <div class="event-item">
           <a href="#">
@@ -489,7 +496,84 @@
             </a>
           </div>
       </div>
+      <div class="page-number">
+        <a href="#"><button>1</button></a>
+        <a href="#"><button>2</button></a>
+        <a href="#"><button>Next <span><i class="fa-solid fa-angles-right"></i></span></button></a>
+      </div>
     </main>
+
+    <footer>
+      <div class="logo"><img src="/image/nasa-logo.svg" alt="" /></div>
+      <div class="content">
+      <div class="detail">
+        <h3>The National Aeronautics and Space Administration</h3>
+        <p>
+          NASA explores the unknown in air and space, innovates for the benefit
+          of humanity, and inspires the world through discovery.
+        </p>
+        <div class="about"><a href="#">About NASA's Mission</a></div>
+        <a href="#"
+          >Join Us
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+              /></svg></span
+        ></a>
+      </div>
+      <ul class="footermenu first">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News & Events</a></li>
+        <li><a href="#">Multimedia</a></li>
+        <li><a href="#">NASA TV</a></li>
+        <li><a href="#">Missions</a></li>
+        <li><a href="#">Human in Space</a></li>
+        <li><a href="#">Earth & Climate</a></li>
+        <li><a href="#">The Solar System</a></li>
+        <li><a href="#">The Universe</a></li>
+        <li><a href="#">Science</a></li>
+        <li><a href="#">Aeronautics</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Learning Resources</a></li>
+        <li><a href="#">About NASA</a></li>
+        <li><a href="#">NASA en Español</a></li>
+      </ul>
+      <div class="contact">
+        <h3>Follow NASA</h3>
+        <ul class="contact-icon">
+          <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+        </ul>
+        <div class="more"><a href="#">More NASA Social Accounts</a></div>
+        <div class="letter"><a href="#">NASA Newsletters</a></div></div>
+        <ul class="footermenu secondary">
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">For Media</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">FOIA</a></li>
+          <li><a href="#">NO FEAR Act</a></li>
+          <li><a href="#">Office of the IG</a></li>
+          <li><a href="#">Budget & Annual Reports</a></li>
+          <li><a href="#">Agency Financial Reports</a></li>
+          <li><a href="#">Contact NASA</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+        <ul class="credit">
+          <li><div>Page Last Updated:</div> <div>Nov 09,2023</div></li>
+          <li><div>Page Editor:</div> <div>Dacia Massengill</div></li>
+          <li><div>Responsible NASA Official:</div> <div>Brian Dunbar</div></li>
+        </ul></div>
+    </footer>
     <script src="/js/active.js"></script>
   </body>
 </html>

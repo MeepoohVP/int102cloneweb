@@ -44,7 +44,7 @@
         </button>
       </div>
       <div class="logo">
-        <a href="https://www.nasa.gov"><img src="/image/nasa-logo.svg" /></a>
+        <a href="index.html"><img src="/image/nasa-logo.svg" /></a>
       </div>
       <div class="search">
         <button onclick="togglePop()">
@@ -63,20 +63,21 @@
         </div>
 
         <div class="logo">
-          <a href="https://www.nasa.gov"><img src="/image/nasa-logo.svg" /></a>
+          <a href="index.html"><img src="/image/nasa-logo.svg" /></a>
         </div>
         <div class="menu-right">
+          <a href="event.html">
           <button class="Explore">
             <div class="explore">News & Event</div>
             <div class="drop"><i class="bi bi-chevron-down"></i></div>
-          </button>
-          <button class="Explore">
+          </button></a>
+          <a href="#"><button class="Explore">
             <div class="explore">Multimedia</div>
             <div class="drop"><i class="bi bi-chevron-down"></i></div>
-          </button>
-          <button class="Explore">
+          </button></a>
+          <a href="#"><button class="Explore">
             <div class="explore">Nasa+</div>
-          </button>
+          </button></a>
         </div>
       </div>
     </header>
@@ -159,7 +160,7 @@
         <hr />
         <ul>
           <li>
-            <a href="#"
+            <a href="event.html"
               ><div>News & Events</div>
               <div><i class="bi bi-chevron-right"></i></div
             ></a>
@@ -576,10 +577,11 @@
         <h2>Image of The Day</h2>
       </div>
       <figure>
-        <button type="download" class="download">
-          <i class="bi bi-download"></i></button
-        ><img src="/image/image-of-day/worm.jpg" alt="" /><a href="#"
-          >View image
+        <a class="link-download" href="image/image-of-day/jupiter.webp" download><button class="download">
+          <i class="bi bi-download"></i></button>
+        </a>
+        <img src="image/image-of-day/jupiter.webp" alt="" /><br><a href="jupiter.html"
+          class="view-image">View image
           <span
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -595,11 +597,9 @@
         ></a>
       </figure>
       <div class="content">
-        <p>NASA’s Worm Logo</p>
+        <p>Jupiter in Ultraviolet</p>
         <p>
-          The NASA Worm Logo sign is unveiled before the ribbon cutting ceremony
-          to open NASA’s Earth Information Center, Wednesday, June 21, 2023, at
-          NASA Headquarters building in Washington.
+          NASA's Hubble Space Telescope reveals an ultraviolet view of Jupiter.
         </p>
         <a href="#"
           >Browse Image Archive
