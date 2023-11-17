@@ -1,6 +1,11 @@
 function togglePop() {
-    document.getElementById("bar").classList.toggle("active");
+    document.querySelector("#bar").classList.toggle("active");
 }
 function barToggle(){
-    document.getElementById("menubar").classList.toggle("active");
+    document.querySelector("#menubar").classList.toggle("active");
+    document.querySelector(".drop").classList.toggle("active");
+    document.querySelector(".menu-toggle").classList.toggle("active");
+}
+function filterTimezone(){
+    document.querySelector(".filter").classList.toggle("active");
 }
