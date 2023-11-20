@@ -8,3 +8,415 @@ body{
     font-family: "Public Sans",sans-serif;
     background-color: #17171b;
 }
+.plus-desktop{
+    font-family: 'Inter';
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    display: none;
+}
+.typepage a{
+    color: #f6f6f6;
+    text-decoration: none;
+}
+.typepage a:hover{
+    text-decoration: underline dotted #f6f6f6;
+    text-underline-offset: 4px;
+}
+.typepage span{
+    color: #d1d1d1;
+}
+.typepage > span::before{
+    font-family: FontAwesome;
+    content: '\f054';
+    color: #58585b;
+    font-size: 10px;
+    margin: 0 4px;
+    vertical-align: middle;
+}
+.menu-plus button{
+    background: none;
+    border: none;
+    color: #d1d1d1;
+    font-size: 14px;
+    padding: 16px;
+    cursor: pointer;
+}
+.menu-plus button:focus{
+    outline: dodgerblue 4px solid;
+}
+.menu-plus button span{
+    font-size: 8px;
+    margin-left: 4px;
+}
+.btn-drop{
+    font-weight: 700;
+}
+.btn-normal{
+    font-weight: 500;
+}
+.spacenav{
+    visibility: hidden;
+}
+.plus-search{
+    background-color: #2e2e32;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 96px 12px 0 12px;
+    padding: 8px;
+}
+.plus-search-left{
+    color: #959599;
+}
+.plus-search-middle{
+    width: 95%;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 20px;
+    padding: 8px;
+}
+.plus-search-middle:focus{
+    outline: dodgerblue 4px solid;
+}
+.plus-search-right{
+    width: 33px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: white;
+    background-color: #77777a;
+    padding: 4px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.plus-search-right:hover{
+    background-color: #1c67e3;
+}
+
+.plus-mobile{
+    position: relative;
+    background-color: #0b3d91;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    font-family: 'Inter';
+    cursor: pointer;
+}
+.plus-mobile.active .plus-mobile-right{
+    transform: rotate(180deg);
+}
+.plus-mobile-left{
+    font-size: 18px;
+    font-weight: 700;
+}
+.plus-mobile-right{
+    width: 16px;
+    height: 17px;
+    font-size: 8px;
+    border: 1px white solid;
+    fill: white;
+    padding: 4px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+.sub-plus-mobile{
+    font-family: 'Inter';
+    background-color: #000;
+    padding: 0 24px 20px 24px;
+    display: none;
+}
+.sub-plus-mobile.active{
+    display: block;
+}
+.sub-plus-mobile > div{
+    padding: 8px 0 0 0;
+}
+.sub-plus-mobile > div .sub-name:hover, .sub-plus-mobile > .sub-normal a:hover{
+    text-decoration: underline dotted #d1d1d1;
+    text-underline-offset: 4px;
+}
+.sub-plus-mobile a{
+    color: #d1d1d1;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    align-items: center;
+}
+.sub-dropmore{
+    font-size: 18px;
+}
+.dropmore{
+    font-size: 28px;
+}
+.plus-heading{
+    color: #d1d1d1;
+    margin: 32px 12px 0 12px;
+}
+.plus-heading h1{
+    font-size: 20px;
+}
+.plus-heading p{
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.plus-topics{
+    position: relative;
+    font-family: 'Inter';
+    margin: 48px 12px 0 12px;
+}
+.plus-topics h3{
+    color: #d1d1d1;
+    font-size: 20px;
+}
+.plus-topics-category{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.plus-topics-category li{
+    background-color: #77777a;
+    position: relative;
+    width: 49%;
+    margin-top: 12px;
+    padding: 0  0 80px 0;
+    height: auto;
+    cursor: pointer;
+}
+.plus-topics-category li figure{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1) brightness(30%);
+    background: url("../image/plus/universe.webp") no-repeat center center;
+    background-size: cover;
+    transition: .3s;
+}
+.plus-topics-category > li:hover > figure{
+    filter: grayscale(.3) brightness(80%);
+}
+.plus-topics-category li span{
+    top: 50%;
+    translate: 0 -50%;
+    position: absolute;
+    margin: 0 32px;
+    color: #e3e3e3;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    text-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+.plus-series{
+    margin: 64px 12px 128px 12px;
+    font-family: 'Inter';
+    height: fit-content;
+    position: relative;
+}
+.plus-series header{
+    display: flex;
+    color: #d1d1d1;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.plus-series header h3{
+    font-weight: 700;
+}
+.plus-series header a{
+    display: flex;
+    color: #f6f6f6;
+    text-decoration: none;
+    align-items: center;
+}
+.plus-series header a div{
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+    display: flex;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #f64137;
+    margin-left: 4px;
+    fill: #f6f6f6;
+}
+.plus-series header a svg{
+    color: white;
+}
+.plus-series-content{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 100%;
+}
+/* for chrome opera safari */
+.plus-series-content::-webkit-scrollbar{
+    display: none;
+}
+.plus-series-content article{
+    transition: .5s;
+    position: relative;
+    width: 48%;
+    flex: none;
+    margin-right: 16px;
+}
+
+.plus-series-content article figure{
+    transition: .5s;
+    position: relative;
+    width: 100%;
+    background: url("../image/plus/kids.webp") no-repeat;
+    padding-bottom: 150%;
+    background-size: cover;
+}
+.plus-series-content a{
+    text-decoration: none;
+}
+.plus-series-content article h4{
+    color: #f6f6f6;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 16px;
+    line-height: 1.15;
+}
+.plus-series-content article p{
+    color: #959599;
+    font-family: 'Dm Mono';
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: .5px;
+    margin-top: 8px;
+}
+.plus-series-content:hover article{
+    filter: brightness(30%);
+}
+
+.plus-series-content article:hover{
+    filter: brightness(100%);
+}
+.plus-series-content article figure:hover{
+    filter: brightness(120%);
+}
+.move{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+}
+.move-right button, .move-left button{
+    width: 34px;
+    height: 34px;
+    fill: #ccc;
+    padding: 2px;
+    background-color: #000;
+    border: 1px solid #58585b;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.move-left{
+    position: relative;
+    left: -1%;
+}
+.move-right{
+    position: relative;
+    right: -1%;
+}
+
+
+@media screen and (min-width: 500px) {
+    .plus-series-content article{
+        width: 32%;
+    }
+}
+@media screen and (min-width: 800px) {
+    .plus-topics-category li{
+        width: 32%;
+    }
+    .plus-series-content article{
+        width: 24%;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .plus-desktop{
+        display: flex;
+        padding: 0 96px;
+    }
+    .plus-mobile, .sub-plus-mobile{
+        display: none;
+    }
+    .plus-heading h1, .plus-topics h3, .plus-series header h3{
+        font-size: 24px;
+    }
+    .plus-series header a{
+        font-size: 18px;
+    }
+    .plus-topics-category li{
+        width: 24%;
+    }
+    .plus-series-content article{
+        width: 15.6%;
+    }
+    .plus-topics-category li span{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 1500px) {
+    .plus-search{
+        margin: 96px 96px 0 96px;
+    }
+    .plus-heading{
+        margin: 32px 96px 0 96px;
+    }
+    .plus-topics{
+        margin: 48px 96px 0 96px;
+    }
+    .plus-series{
+        margin: 64px 96px 128px 96px;
+    }
+}
+@media screen and (min-width: 1800px) {
+    .plus-search{
+        margin: 96px 256px 0 256px;
+    }
+    .plus-heading{
+        margin: 32px 256px 0 256px;
+    }
+    .plus-heading h1, .plus-topics h3, .plus-series header h3{
+        font-size: 28px;
+    }
+    .plus-heading p{
+        font-size: 20px;
+    }
+    .plus-topics{
+        margin: 48px 256px 0 256px;
+    }
+    .plus-series{
+        margin: 64px 256px 128px 256px;
+    }
+}

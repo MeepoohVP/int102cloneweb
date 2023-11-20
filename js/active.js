@@ -9,3 +9,7 @@ function barToggle(){
 function filterTimezone(){
     document.querySelector(".filter").classList.toggle("active");
 }
+function nasaPlus(){
+    document.querySelector(".plus-mobile").classList.toggle("active");
+    document.querySelector(".sub-plus-mobile").classList.toggle("active");
+}

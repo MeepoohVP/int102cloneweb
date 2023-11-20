@@ -37,7 +37,7 @@
     cursor: pointer;
     border: none;
     font-weight: 200;
-    color: #d1d1d1;
+    fill: #d1d1d1;
     font-size: 22px;
 }
 .menu-toggle-top, .menu-toggle-middle, .menu-toggle-bottom{
@@ -115,6 +115,9 @@
 }
 .drop{
     transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .drop.active{
     transform: rotate(-180deg);
@@ -157,18 +160,19 @@
     font-size: 6px;
     border: 1.25px solid white;
     border-radius: 50%;
+    fill: white;
 }
 .menu-right a{
     text-decoration: none;
 }
 .menu-right .drop{
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: auto;
     margin-left: 12px;
     padding: 2px 3px;
     color: white;
-    font-size: 12px;
 }
+
 
 .menu-right button + button + button{
     text-transform: uppercase;
@@ -216,6 +220,9 @@
     align-items: center;
     width: 100%;
 }
+.formsearch svg{
+    fill: white;
+}
 .formsearch input{
     position: relative;
     left: 8px;
@@ -240,7 +247,7 @@
     margin-right: 16px;
     width: 1rem;
     height: 1rem;
-    color: white;
+    fill: white;
     background: none;
     border: none;
     font-size: 16px;
@@ -279,12 +286,14 @@
     opacity: .5;
     margin-top: 12px;
 }
-.arrow{
-    color: rgb(246, 65, 55);
-    font-size: 20px;
+
+.arrow svg{
+    fill: #f64137;
+    width: 20px;
+    height: auto;
 }
 .magnify{
-    color: #58585b;
+    fill: #58585b;
     opacity: .5;
     margin-right: 12px;
 }
@@ -413,10 +422,10 @@
         color: #959599;
         text-transform: uppercase;
     }
-    .groupblock span i{
+    .groupblock span svg{
         margin-right: 6px;
         position: relative;
-        top: -2px;
+        top: 2px;
         border: 1px solid #959599;
         border-radius: 50%;
         padding: 3px;
@@ -426,6 +435,6 @@
 }
 @media screen and (min-width: 1800px){
     .Menu{
-        padding: 24px 304px 12px 304px;
+        padding: 24px 128px 12px 56px;
     }
 }

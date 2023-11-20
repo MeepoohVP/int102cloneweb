@@ -7,7 +7,7 @@
 body{
     font-family: "Public Sans",sans-serif;
 }
-.Banner{
+/* .Banner{
     display: flex;
     padding: .75rem;
     background-color: #0b3d91;
@@ -25,7 +25,7 @@ body{
 .banner a{
     color: white;
     text-underline-offset: .3rem;
-}
+} */
 
 .channel{
     padding-top: 8px;
@@ -41,15 +41,15 @@ body{
     border-radius: 50%;
     margin-left: 12px;
     background-color: #58585b;
-    
 }
 .channel button img{
     width: 100%;
     height: auto;
     border-radius: 50%;
 }
-.channel button i{
-    font-size: 32px;
+.channel button svg{
+    width: 32px;
+    height: 32px;
     color: white;
 }
 
@@ -104,6 +104,7 @@ body{
     border-radius: 4px;
     font-family: 'Inter';
     width: 100%;
+    cursor: pointer;
 }
 
 .othernews{
@@ -133,9 +134,10 @@ body{
     vertical-align: middle;
 }
 .othernews .namenews > span > svg{
-    color: #f64137;
-    background-color: white;
+    color: white;
+    background-color: #f64137;
     border-radius: 50%;
+    transform: rotate(-45deg);
 }
 
 /*featured news*/
@@ -344,10 +346,13 @@ body{
     font-weight: 700;
 }
 .feat-story svg{
-    color: #f64137;
-    background-color: white;
+    color: white;
+    background-color: #f64137;
     border-radius: 50%;
     margin-left: 4px;
+    width: 24px;
+    height: auto;
+    transform: rotate(-45deg);
 }
 /*featured story*/
 
@@ -457,9 +462,10 @@ body{
 .earth a svg{
     width: 14px;
     height: 14px;
-    color: #f64137;
-    background-color: #fff;
+    color: #fff;
+    background-color: #f64137;
     border-radius: 50%;
+    transform: rotate(-45deg);
 }
 /* Earth */
 
@@ -501,8 +507,8 @@ body{
 .inbox svg{
     width: 14px;
     height: 14px;
-    color: #f64137;
-    background-color: #fff;
+    color: #fff;
+    background-color: #f64137;
     border-radius: 50%;
 }
 /*inbox*/
@@ -554,8 +560,8 @@ body{
 .more-blog span svg{
     width: 20px;
     height: 20px;
-    color: #f64137;
-    background-color: #fff;
+    color: #fff;
+    background-color: #f64137;
     border-radius: 50%;
 }
 .more-topic .heading{

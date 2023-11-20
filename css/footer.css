@@ -59,6 +59,12 @@ footer .logo img{
     align-items: center;
     justify-content: center;
 }
+.contact .contact-icon > li svg{
+    fill: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .contact .more{
     font-size: 15px;
     margin-top: 32px;
@@ -91,13 +97,18 @@ footer .logo img{
 }
 .detail > a{
     font-weight: 700;
+    display: flex;
 }
-.detail > a span svg{
-    margin-left: 4px;
+.detail > a div{
+    margin-left: 6px;
     width: 18px;
     height: 18px;
-    color: #f64137;
-    background-color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: white;
+    background-color: #f64137;
     border-radius: 50%;
 }
 .credit{

@@ -1,319 +1,683 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/plus.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-    />
-    <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/plus.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <title></title>
 </head>
+
 <body>
-    <header class="Bar">
-        <div class="toggle-bar">
-          <button onclick="barToggle()">
-            <div class="menu-toggle">
-              <div class="menu-toggle-top"></div>
-              <div class="menu-toggle-middle"></div>
-              <div class="menu-toggle-bottom"></div>
+  <header class="Bar">
+    <div class="toggle-bar">
+      <button onclick="barToggle()">
+        <div class="menu-toggle">
+          <div class="menu-toggle-top"></div>
+          <div class="menu-toggle-middle"></div>
+          <div class="menu-toggle-bottom"></div>
+        </div>
+      </button>
+    </div>
+    <div class="logo">
+      <a href="index.html"><img src="image/nasa-logo.svg" /></a>
+    </div>
+    <div class="search">
+      <button onclick="togglePop()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+        </svg>
+      </button>
+    </div>
+  </header>
+  <header class="Menu">
+    <div class="menu">
+      <div class="menu-left">
+        <button class="Explore" onclick="barToggle()">
+          <div class="explore">Explore</div>
+          <div class="drop">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+            </svg>
+          </div>
+        </button>
+        <input type="search" placeholder="Search..." />
+      </div>
+
+      <div class="logo">
+        <a href="index.html"><img src="image/nasa-logo.svg" /></a>
+      </div>
+      <div class="menu-right">
+        <a href="event.html">
+          <button class="Explore">
+            <div class="explore">News & Event</div>
+            <div class="drop"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+              </svg></div>
+          </button></a>
+        <a href="#"><button class="Explore">
+            <div class="explore">Multimedia</div>
+            <div class="drop"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+              </svg></div>
+          </button></a>
+        <a href="plus.html"><button class="Explore">
+            <div class="explore plus">Nasa+</div>
+          </button></a>
+      </div>
+    </div>
+  </header>
+  <div class="menubar" id="menubar">
+    <div class="linkpage">
+      <ul>
+        <li>
+          <a href="#">
+            <div>Home</div>
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+              </svg></div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>Missions</div>
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+              </svg></div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>Humans in Space</div>
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+              </svg></div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>Earth & Climate</div>
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+              </svg></div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>The Solar System</div>
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+              </svg></div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>The Universe</div>
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+              </svg></div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>Science</div>
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+              </svg></div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>Aeronautics</div>
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+              </svg></div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>Technology</div>
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+              </svg></div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>Leaining Resources</div>
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+              </svg></div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>About NASA</div>
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+              </svg></div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>Español</div>
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+              </svg></div>
+          </a>
+        </li>
+      </ul>
+      <hr />
+      <ul>
+        <li>
+          <a href="event.html">
+            <div>News & Events</div>
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+              </svg></div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>Multimedia</div>
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+              </svg></div>
+          </a>
+        </li>
+        <li>
+          <a href="plus.html">
+            <div class="plus">NASA+</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="featured">
+      <h3>Featured</h3>
+      <div class="groupblock">
+        <a href="#">
+          <div class="block">
+            <div class="pic">
+              <img src="image/img-0662-1.webp" alt="Keeper" />
             </div>
-          </button>
-        </div>
-        <div class="logo">
-          <a href="index.html"><img src="image/nasa-logo.svg" /></a>
-        </div>
-        <div class="search">
-          <button onclick="togglePop()">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </div>
-      </header>
-      <header class="Menu">
-        <div class="menu">
-          <div class="menu-left">
-            <button class="Explore" onclick="barToggle()">
-              <div class="explore">Explore</div>
-              <div class="drop"><i class="bi bi-chevron-down"></i></div>
-            </button>
-            <input type="search" placeholder="Search..." />
+            <div class="min">9 min read</div>
+            <div class="headline">
+              Rita Owens: Keeper of NASA’s Digital Knowledge
+            </div>
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                <path
+                  d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z" />
+              </svg> article</span><span>3 days ago</span>
           </div>
-  
-          <div class="logo">
-            <a href="index.html"><img src="image/nasa-logo.svg" /></a>
+        </a>
+        <a href="#">
+          <div class="block">
+            <div class="pic">
+              <img src="image/marscloud.webp" alt="Keeper" />
+            </div>
+            <div class="min">9 min read</div>
+            <div class="headline">
+              Rita Owens: Keeper of NASA’s Digital Knowledge
+            </div>
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                <path
+                  d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z" />
+              </svg>article</span><span>3 days ago</span>
           </div>
-          <div class="menu-right">
-            <a href="event.html">
-              <button class="Explore">
-                <div class="explore">News & Event</div>
-                <div class="drop"><i class="bi bi-chevron-down"></i></div>
-              </button></a>
-              <a href="#"><button class="Explore">
-                <div class="explore">Multimedia</div>
-                <div class="drop"><i class="bi bi-chevron-down"></i></div>
-              </button></a>
-              <a href="#"><button class="Explore">
-                <div class="explore plus">Nasa+</div>
-              </button></a>
+        </a>
+        <a href="#">
+          <div class="block">
+            <div class="pic">
+              <img src="image/tundra.webp" alt="Keeper" />
+            </div>
+            <div class="min">9 min read</div>
+            <div class="headline">
+              Rita Owens: Keeper of NASA’s Digital Knowledge
+            </div>
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                <path
+                  d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z" />
+              </svg>article</span><span>3 days ago</span>
           </div>
-        </div>
-      </header>
-      <div class="menubar" id="menubar">
-        <div class="linkpage">
-          <ul>
-            <li>
-              <a href="#">
-                <div>Home</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div>Missions</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div>Humans in Space</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div>Earth & Climate</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div>The Solar System</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div>The Universe</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div>Science</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div>Aeronautics</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div>Technology</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div>Leaining Resources</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div>About NASA</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div>Español</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-              </a>
-            </li>
-          </ul>
-          <hr />
-          <ul>
-            <li>
-              <a href="event.html">
-                <div>News & Events</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div>Multimedia</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="plus">NASA+</div>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="featured">
-          <h3>Featured</h3>
-          <div class="groupblock">
-            <a href="#">
-              <div class="block">
-                <div class="pic">
-                  <img src="/image/img-0662-1.webp" alt="Keeper" />
-                </div>
-                <div class="min">9 min read</div>
-                <div class="headline">
-                  Rita Owens: Keeper of NASA’s Digital Knowledge
-                </div>
-                <span><i class="bi bi-bookmark-fill"></i> article</span
-                ><span>3 days ago</span>
-              </div>
-            </a>
-            <a href="#">
-              <div class="block">
-                <div class="pic">
-                  <img src="/image/marscloud.webp" alt="Keeper" />
-                </div>
-                <div class="min">9 min read</div>
-                <div class="headline">
-                  Rita Owens: Keeper of NASA’s Digital Knowledge
-                </div>
-                <span><i class="bi bi-bookmark-fill"></i>article</span
-                ><span>3 days ago</span>
-              </div>
-            </a>
-            <a href="#">
-              <div class="block">
-                <div class="pic">
-                  <img src="/image/tundra.webp" alt="Keeper" />
-                </div>
-                <div class="min">9 min read</div>
-                <div class="headline">
-                  Rita Owens: Keeper of NASA’s Digital Knowledge
-                </div>
-                <span><i class="bi bi-bookmark-fill"></i>article</span
-                ><span>3 days ago</span>
-              </div>
-            </a>
-          </div>
-        </div>
+        </a>
       </div>
-      <div class="search-panel" id="bar">
-        <div class="panel">
-          <form class="formsearch">
-            <i class="fa-solid fa-magnifying-glass"></i
-            ><input placeholder="Search the universe" />
-          </form>
-          <button class="closepanel" onclick="togglePop()">
-            <i class="fa-solid fa-x"></i>
-          </button>
-        </div>
-        <div class="searchlist">
-          <div class="searchcategory">
-            <h2 class="suggest">Suggested Searches</h2>
-            <ul class="category">
-              <li>
-                <a href="#">
-                  <div>
-                    <span class="magnify"
-                      ><i class="fa-solid fa-magnifying-glass"></i></span
-                    >Climate Change
-                  </div>
-                  <div class="arrow">
-                    <i class="bi bi-arrow-right-circle-fill"></i>
-                  </div>
-                </a>
-                <hr />
-              </li>
-              <li>
-                <a href="#">
-                  <div>
-                    <span class="magnify"
-                      ><i class="fa-solid fa-magnifying-glass"></i></span
-                    >Artemis
-                  </div>
-                  <div class="arrow">
-                    <i class="bi bi-arrow-right-circle-fill"></i>
-                  </div>
-                </a>
-                <hr />
-              </li>
-              <li>
-                <a href="#">
-                  <div>
-                    <span class="magnify"
-                      ><i class="fa-solid fa-magnifying-glass"></i></span
-                    >Expedition 64
-                  </div>
-                  <div class="arrow">
-                    <i class="bi bi-arrow-right-circle-fill"></i>
-                  </div>
-                </a>
-                <hr />
-              </li>
-              <li>
-                <a href="#">
-                  <div>
-                    <span class="magnify"
-                      ><i class="fa-solid fa-magnifying-glass"></i></span
-                    >Mars perseverance
-                  </div>
-                  <div class="arrow">
-                    <i class="bi bi-arrow-right-circle-fill"></i>
-                  </div>
-                </a>
-                <hr />
-              </li>
-              <li>
-                <a href="#">
-                  <div>
-                    <span class="magnify"
-                      ><i class="fa-solid fa-magnifying-glass"></i></span
-                    >SpaceX Crew-2
-                  </div>
-                  <div class="arrow">
-                    <i class="bi bi-arrow-right-circle-fill"></i>
-                  </div>
-                </a>
-                <hr />
-              </li>
-              <li>
-                <a href="#">
-                  <div>
-                    <span class="magnify"
-                      ><i class="fa-solid fa-magnifying-glass"></i></span
-                    >International Space Station
-                  </div>
-                  <div class="arrow">
-                    <i class="bi bi-arrow-right-circle-fill"></i>
-                  </div>
-                </a>
-                <hr />
-              </li>
-              <li>
-                <a href="#">
-                  <div>View All Topics A-Z</div>
-                  <div class="arrow">
-                    <i class="bi bi-arrow-right-circle-fill"></i>
-                  </div>
-                </a>
-                <hr />
-              </li>
-            </ul>
-          </div>
-        </div>
+    </div>
+  </div>
+  <div class="search-panel" id="bar">
+    <div class="panel">
+      <form class="formsearch">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+        </svg><input placeholder="Search the universe" />
+      </form>
+      <button class="closepanel" onclick="togglePop()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
+          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z" />
+        </svg>
+      </button>
+    </div>
+    <div class="searchlist">
+      <div class="searchcategory">
+        <h2 class="suggest">Suggested Searches</h2>
+        <ul class="category">
+          <li>
+            <a href="#">
+              <div>
+                <span class="magnify"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                      d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                  </svg></span>Climate Change
+              </div>
+              <div class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                </svg>
+              </div>
+            </a>
+            <hr />
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <span class="magnify"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                      d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                  </svg></span>Artemis
+              </div>
+              <div class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                </svg>
+              </div>
+            </a>
+            <hr />
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <span class="magnify"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                      d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                  </svg></span>Expedition 64
+              </div>
+              <div class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                </svg>
+              </div>
+            </a>
+            <hr />
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <span class="magnify"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                      d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                  </svg></span>Mars perseverance
+              </div>
+              <div class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                </svg>
+              </div>
+            </a>
+            <hr />
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <span class="magnify"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                      d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                  </svg></span>SpaceX Crew-2
+              </div>
+              <div class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                </svg>
+              </div>
+            </a>
+            <hr />
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <span class="magnify"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                      d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                  </svg></span>International Space Station
+              </div>
+              <div class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                </svg>
+              </div>
+            </a>
+            <hr />
+          </li>
+          <li>
+            <a href="#">
+              <div>View All Topics A-Z</div>
+              <div class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                </svg>
+              </div>
+            </a>
+            <hr />
+          </li>
+        </ul>
       </div>
-      <script src="js/active.js"></script>
+    </div>
+  </div>
+  <nav class="plus-mobile" onclick="nasaPlus()">
+    <div class="plus-mobile-left">Explore NASA+</div>
+    <div class="plus-mobile-right"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg></div>
+  </nav>
+  <div class="sub-plus-mobile">
+    <div class="sub-dropmore"><a href="#">
+        <div class="sub-name">Explore Topics</div>
+        <div class="dropmore">+</div>
+      </a></div>
+    <div class="sub-dropmore"><a href="#">
+        <div class="sub-name">Explore Series</div>
+        <div class="dropmore">+</div>
+      </a></div>
+    <div class="sub-normal"><a href="#">Scheduled Events</a></div>
+    <div class="sub-normal"><a href="#">Search Videos</a></div>
+  </div>
+  <nav class="plus-desktop">
+    <div class="typepage">
+      <a href="#">NASA+</a><span>Search</span>
+    </div>
+    <div class="menu-plus">
+      <a href="#"><button class="btn-drop">Explore Topics <span><i
+              class="fa-solid fa-chevron-down"></i></span></button></a>
+      <a href="#"><button class="btn-drop">Explore Series <span><i
+              class="fa-solid fa-chevron-down"></i></span></button></a>
+      <a href="#"><button class="btn-normal">Scheduled Events</button></a>
+      <a href="#"><button class="btn-normal">Search Videos</button></a>
+    </div>
+    <div class="typepage spacenav">NASA+<span>Search</span></div>
+  </nav>
+  <form class="plus-search" action="">
+    <div class="plus-search-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg></div>
+    <input class="plus-search-middle" type="text" placeholder="Search videos, topics, and more">
+    <div class="plus-search-right"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></div>
+  </form>
+  <div class="plus-heading">
+    <h1>Search</h1>
+    <p>Search our on-demand content and upcoming live events using the field above, or browse our topics and series.</p>
+  </div>
+  <main class="plus-topics">
+    <h3>Explore Topics</h3>
+    <ul class="plus-topics-category">
+      <li><a href="#"></a>
+        <figure></figure><span>The Universe</span></a>
+      </li>
+      <li><a href="#"></a>
+        <figure></figure><span>The Universe</span></a>
+      </li>
+      <li><a href="#"></a>
+        <figure></figure><span>The Universe</span></a>
+      </li>
+      <li><a href="#"></a>
+        <figure></figure><span>The Universe</span></a>
+      </li>
+      <li><a href="#"></a>
+        <figure></figure><span>The Universe</span></a>
+      </li>
+      <li><a href="#"></a>
+        <figure></figure><span>The Universe</span></a>
+      </li>
+      <li><a href="#"></a>
+        <figure></figure><span>The Universe</span></a>
+      </li>
+      <li><a href="#"></a>
+        <figure></figure><span>The Universe</span></a>
+      </li>
+      <li><a href="#"></a>
+        <figure></figure><span>The Universe</span></a>
+      </li>
+      <li><a href="#"></a>
+        <figure></figure><span>The Universe</span></a>
+      </li>
+      <li><a href="#"></a>
+        <figure></figure><span>The Universe</span></a>
+      </li>
+      <li><a href="#"></a>
+        <figure></figure><span>The Universe</span></a>
+      </li>
+    </ul>
+  </main>
+  <main class="plus-series">
+    
+    
+    <header>
+      <h3>NASA Series</h3>
+      <a href="#">See All <div><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></div></a>
+    </header>
+    <div class="plus-series-content">
+      <article><a href="#">
+          <figure></figure>
+          <h4>The Traveler</h4>
+          <p>8 episodes</p>
+        </a>
+      </article>
+      <article><a href="#">
+          <figure></figure>
+          <h4>The Traveler</h4>
+          <p>8 episodes</p>
+        </a>
+      </article>
+      <article><a href="#">
+          <figure></figure>
+          <h4>The Traveler</h4>
+          <p>8 episodes</p>
+        </a>
+      </article>
+      <article><a href="#">
+          <figure></figure>
+          <h4>The Traveler</h4>
+          <p>8 episodes</p>
+        </a>
+      </article>
+      <article><a href="#">
+          <figure></figure>
+          <h4>The Traveler</h4>
+          <p>8 episodes</p>
+        </a>
+      </article>
+      <article><a href="#">
+          <figure></figure>
+          <h4>The Traveler</h4>
+          <p>8 episodes</p>
+        </a>
+      </article>
+      <article><a href="#">
+          <figure></figure>
+          <h4>The Traveler</h4>
+          <p>8 episodes</p>
+        </a>
+      </article>
+      <article><a href="#">
+          <figure></figure>
+          <h4>The Traveler</h4>
+          <p>8 episodes</p>
+        </a>
+      </article>
+
+    </div><div class="move"><div class="move-left"><button><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></button></div>
+    <div class="move-right"><button><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></button></div></div>
+  </main>
+
+  <footer>
+    <div class="logo"><img src="image/nasa-logo.svg" alt="" /></div>
+    <div class="content">
+      <div class="detail">
+        <h3>The National Aeronautics and Space Administration</h3>
+        <p>
+          NASA explores the unknown in air and space, innovates for the
+          benefit of humanity, and inspires the world through discovery.
+        </p>
+        <div class="about"><a href="#">About NASA's Mission</a></div>
+        <a href="#">Join Us
+          <div><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+              viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+            </svg></div>
+        </a>
+      </div>
+      <ul class="footermenu first">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News & Events</a></li>
+        <li><a href="#">Multimedia</a></li>
+        <li class="plus"><a href="#">NASA+</a></li>
+        <li><a href="#">Missions</a></li>
+        <li><a href="#">Human in Space</a></li>
+        <li><a href="#">Earth & Climate</a></li>
+        <li><a href="#">The Solar System</a></li>
+        <li><a href="#">The Universe</a></li>
+        <li><a href="#">Science</a></li>
+        <li><a href="#">Aeronautics</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Learning Resources</a></li>
+        <li><a href="#">About NASA</a></li>
+        <li><a href="#">NASA en Español</a></li>
+      </ul>
+      <div class="contact">
+        <h3>Follow NASA</h3>
+        <ul class="contact-icon">
+          <li>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+              </svg></i></a>
+          </li>
+          <li>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+              </svg></a>
+          </li>
+          <li>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+              </svg></a>
+          </li>
+          <li>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
+              </svg></a>
+          </li>
+        </ul>
+        <div class="more"><a href="#">More NASA Social Accounts</a></div>
+        <div class="letter"><a href="#">NASA Newsletters</a></div>
+      </div>
+      <ul class="footermenu secondary">
+        <li><a href="#">Sitemap</a></li>
+        <li><a href="#">For Media</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">FOIA</a></li>
+        <li><a href="#">NO FEAR Act</a></li>
+        <li><a href="#">Office of the IG</a></li>
+        <li><a href="#">Budget & Annual Reports</a></li>
+        <li><a href="#">Agency Financial Reports</a></li>
+        <li><a href="#">Contact NASA</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+      <ul class="credit">
+        <li>
+          <div>Page Last Updated:</div>
+          <div>Nov 09,2023</div>
+        </li>
+        <li>
+          <div>Page Editor:</div>
+          <div>Dacia Massengill</div>
+        </li>
+        <li>
+          <div>Responsible NASA Official:</div>
+          <div>Brian Dunbar</div>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/active.js"></script>
 </body>
+
 </html>
