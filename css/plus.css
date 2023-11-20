@@ -30,10 +30,10 @@ body{
     color: #d1d1d1;
 }
 .typepage > span::before{
-    font-family: FontAwesome;
-    content: '\f054';
+    content: '>';
     color: #58585b;
-    font-size: 10px;
+    font-size: 12px;
+    font-weight: 500;
     margin: 0 4px;
     vertical-align: middle;
 }
@@ -41,6 +41,7 @@ body{
     background: none;
     border: none;
     color: #d1d1d1;
+    fill: #d1d1d1;
     font-size: 14px;
     padding: 16px;
     cursor: pointer;

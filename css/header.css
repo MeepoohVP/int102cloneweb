@@ -113,6 +113,9 @@
     font-size: 18px;
     cursor: pointer;
 }
+.drop svg{
+    fill: white;
+}
 .drop{
     transition: .3s;
     display: flex;
