@@ -321,11 +321,8 @@ body{
     background-size: cover;
     background: url("../image/featured-story/danne.webp") no-repeat center top;
     transition: .5s;
-    box-shadow: 328px -336px 128px  inset rgba(0, 0, 0, 0.7);
+    box-shadow: 328px -336px 128px inset rgba(0, 0, 0, 0.7);
     filter: brightness(80%);
-}
-.feat-story:hover{
-    background-position: right top;
 }
 
 .feat-story .content{

@@ -305,10 +305,10 @@
 .menubar{
     position: relative;
     width: 100%;
-    height: auto;
+    height: 88%;
+    overflow-y: scroll;
     color: white;
     background-color: black;
-    border-top: #444447 1px solid;
     padding: 16px 4px 64px 4px;
     display: none;
     z-index: 11;
@@ -316,6 +316,10 @@
 .menubar.active{
     display: block;
     position: absolute;
+}
+body:has(.menubar.active), body:has(.search-panel.active){
+    height: 100%;
+    overflow: hidden;
 }
 .linkpage hr{
     opacity: .3;
@@ -353,6 +357,10 @@
     }
     .Menu{
         display: block;
+    }
+    .menubar{
+        overflow: auto;
+        height: auto;
     }
     .menubar hr + ul, .menubar hr{
         display: none;
