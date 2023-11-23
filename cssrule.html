@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/rule.css" />
+</head>
+
+<body>
+  <div class="index">
+    <a href="index.html"><img src="image/nasa-logo.svg" alt="nasa"></a>
+  </div>
+  <h1># CSS Rules</h1>
+  <div class="groupitem">
+    <div class="item">
+      <div class="content property">
+        <code><h3>Transition</h3> </code>
+      </div>
+      <pre>
+        <code>
+        <span class="class">.container</span><span class="bracket">{</span>
+            <span class="css highlight">transition</span><span class="colon">:</span> <span class="setting">[property] [duration] [timing-function] [delay]</span><span class="colon">;</span>
+        <span class="bracket">}</span>
+        </code>
+    </pre>
+      <div class="content paragraph">
+        <p>
+          ทำให้การเปลี่ยนแปลงค่า เช่น background-color, width, height
+          ค่อยๆเปลี่ยนแปลงไปตามเวลาที่กำหนด
+        </p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="content selector">
+        <code><h3>::has()</h3> </code>
+      </div>
+      <pre>
+    <code>
+        <span class="element">div<span class="highlight">:has(p)</span></span><span class="bracket">{</span>
+            <span class="css">width</span><span class="colon">:</span> <span class="setting">70%</span><span class="colon">;</span>
+        <span class="bracket">}</span>
+    </code>
+</pre>
+      <div class="content paragraph">
+        <p>จากตัวอย่างหมายถึง div element ที่มี p element อยู่จะมีความกว้าง 70%</p>
+      </div>
+    </div>
+
+
+
+    <div class="item">
+      <div class="content property">
+        <code><h3>z-index</h3> </code>
+      </div>
+      <pre>
+      <code>
+        <span class="class">.container</span><span class="bracket">{</span>
+            <span class="css highlight">z-index</span><span class="colon">:</span> <span class="setting">[value]</span><span class="colon">;</span>
+        <span class="bracket">}</span>
+      </code>
+  </pre>
+      <div class="content paragraph">
+        <p>จัดลำดับการซ้อนทับในแนวแกน z</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="content property">
+        <code><h3>aspect-ratio</h3> </code>
+      </div>
+      <pre>
+    <code>
+      <span class="element">img</span><span class="bracket">{</span>
+          <span class="css highlight">aspect-ratio</span><span class="colon">:</span> <span class="setting">[ratio]</span><span class="colon">;</span>
+      <span class="bracket">}</span>
+    </code>
+</pre>
+      <div class="content paragraph">
+        <p>กำหนดอัตราส่วนรูปภาพ เช่น 16/9, 4/3 เป็นต้น</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="content selector">
+        <code><h3>::before & ::after</h3> </code>
+      </div>
+      <pre>
+    <code>
+      <span class="element">p<span class="highlight">::after</span></span><span class="bracket">{</span>
+          <span class="css">content</span><span class="colon">:</span> <span class="setting">"After selector"</span><span class="colon">;</span>
+      <span class="bracket">}</span><br>
+      <span class="element">p<span class="highlight">::before</span></span><span class="bracket">{</span>
+          <span class="css">content</span><span class="colon">:</span> <span class="setting">"Before selector"</span><span class="colon">;</span>
+      <span class="bracket">}</span>
+    </code>
+</pre>
+      <div class="content paragraph">
+        <p>สร้าง content อยู่ข้างหน้า (before) และข้างหลัง (after) โดย content ที่สร้างขึ้นไม่สามารถ copy ได้
+          <br>**เราสามารถกำหนด border, color หรือ background ให้ contentได้**</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="content property">
+        <code><h3>Transform</h3> </code>
+      </div>
+      <pre>
+  <code>
+      <span class="class">.container</span><span class="bracket">{</span>
+          <span class="css highlight">transform</span><span class="colon">:</span> <span class="setting">[feature]</span><span class="colon">;</span>
+      <span class="bracket">}</span>
+  </code>
+</pre>
+      <div class="content paragraph">
+        <p>ใช้ปรับแต่งการแสดงผลของ element เช่น
+        <ul>
+          <li><span class="medium">scale()</span> ใช้สำหรับขยายหรือย่อ ค่าเริ่มต้นคือ 1</li>
+          <li><span class="medium">rotate()</span> ใช้ในการหมุน</li>
+          <li><span class="medium">translate()</span> เลื่อนองค์ประกอบไปตามแกน x,y หรือ z</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="content property">
+        <code><h3>Object-fit</h3> </code>
+      </div>
+      <pre>
+  <code>
+      <span class="element">img</span><span class="bracket">{</span>
+          <span class="css">width</span><span class="colon">:</span> <span class="setting">200px</span><span class="colon">;</span><br>
+          <span class="css">height</span><span class="colon">:</span> <span class="setting">320px</span><span class="colon">;</span><br>
+          <span class="css highlight">object-fit</span><span class="colon">:</span> <span class="setting">cover</span><span class="colon">;</span>
+      <span class="bracket">}</span>
+  </code>
+</pre>
+      <div class="content paragraph">
+        <p>ใช้จัดการรูปภาพ
+        <ul>
+          <li><span class="medium">cover</span> - ปรับขนาดรูปตามความกว้าง ความสูง และครอปรูปภาพให้เหมาะสม</li>
+          <li><span class="medium">contain</span> - แสดงรูปในอัตราส่วนเต็ม</li>
+          <li><span class="medium">fill</span> - ปรับขนาดรูปตามความกว้าง ความสูงที่กำหนดโดยรูปจะถูกบีบ (default)</li>
+          <li><span class="medium">none</span> - รูปภาพไม่มีการปรับขนาด</li>
+          <li><span class="medium">scale-down</span> - รูปภาพจะถูกปรับให้เป็นเวอร์ชันที่เล็กที่สุด</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="content selector">
+        <code><h3>::-webkit-scrollbar</h3> </code>
+      </div>
+      <pre>
+  <code>
+      <span class="class">.container<span class="highlight">::-webkit-scrollbar</span></span><span class="bracket">{</span>
+          <span class="css">display</span><span class="colon">:</span> <span class="setting">none</span><span class="colon">;</span>
+      <span class="bracket">}</span>
+  </code>
+</pre>
+      <div class="content paragraph">
+        <p>ใช้ปรับแต่ง Scroll bar
+        </p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="content property">
+        <code><h3>text-underline-offset</h3> </code>
+      </div>
+      <pre>
+  <code>
+      <span class="element">h1</span><span class="bracket">{</span>
+          <span class="css">text-decoration</span><span class="colon">:</span> <span class="setting">underline dotted #000</span><span class="colon">;</span><br>
+          <span class="css highlight">text-underline-offset</span><span class="colon">:</span> <span class="setting">[value]</span><span class="colon">;</span>
+      <span class="bracket">}</span>
+  </code>
+</pre>
+      <div class="content paragraph">
+        <p>เว้นระยะห่างของ underline กับข้อความ
+        </p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="content property">
+        <code><h3>filter</h3> </code>
+      </div>
+      <pre>
+  <code>
+      <span class="element">img</span><span class="bracket">{</span>
+          <span class="css highlight">filter</span><span class="colon">:</span> <span class="setting">brightness(40%)</span><span class="colon">;</span>
+      <span class="bracket">}</span>
+  </code>
+</pre>
+      <div class="content paragraph">
+        <p>ปรับการแสดงผลของ container เช่น
+        <ul>
+          <li><span class="medium">brightness()</span> - ความเข้มแสง</li>
+          <li><span class="medium">grayscale()</span> - ขาวดำ</li>
+          <li><span class="medium">blur()</span> - ความเบลอ</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="content property">
+        <code><h3>columns</h3> </code>
+      </div>
+      <pre>
+  <code>
+      <span class="element">div</span><span class="bracket">{</span>
+          <span class="css highlight">column</span><span class="colon">:</span> <span class="setting">[width] [count]</span><span class="colon">;</span>
+      <span class="bracket">}</span>
+  </code>
+</pre>
+      <div class="content paragraph">
+        <p>ใช้แบ่ง column และกำหนดความกว้างแต่ละ column
+        </p>
+      </div>
+    </div>
+  </div>
+  <script src="js/active.js"></script>
+</body>
+
+</html>

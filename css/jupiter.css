@@ -35,7 +35,7 @@ body{
 
 .details p svg{
     width: 16px;
-    height: auto;
+    height: 16px;
     fill: white;
     display: inline-flex;
     padding: 3px;
