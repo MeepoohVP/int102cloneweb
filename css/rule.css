@@ -8,6 +8,47 @@ body{
     font-family: "Inter", "Prompt";
     background-color: #d5d6db;
 }
+.allpage{
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+.page{
+    position: relative;
+    width: 88%;
+    height: auto;
+}
+.page figure{
+    position: relative;
+    aspect-ratio: 4/2;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+.page figure img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    object-position: center top;
+    transition: .5s;
+}
+.page figure img:hover{
+    transform: scale(1.2);
+}
+.page a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+.page a::after{
+    content: attr(href);
+    color: blue;
+}
 .index{
     position: fixed;
     bottom: 0;
@@ -136,7 +177,22 @@ h1:hover{
     text-decoration: underline dotted currentColor;
     text-underline-offset: 4px;
 }
+@media screen and (min-width: 700px) {
+    .page{
+        width: 56%;
+    }
+}
 @media screen and (min-width: 1024px) {
+    .allpage{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 48px;
+        flex-direction: row;
+        align-items: start;
+    }
+    .page{
+        width: 40%;
+    }
     h1{
         font-size: 40px;
     }
@@ -147,7 +203,7 @@ h1:hover{
     .content h3{
         font-size: 24px;
     }
-    .groupitem{
+    .groupitem, .allpage{
         margin: 0 16%;
     }
     .item:hover{

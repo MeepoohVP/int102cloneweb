@@ -128,7 +128,13 @@ body{
     .jupiter img{
         padding: 0 48px 0 0;
     }
-
+    .details h1{
+        font-size: 24px;
+    }
+    .details p{
+        font-size: 16px;
+        padding-right: 12px;
+    }
 }
 @media screen and (min-width: 1800px) {
     .img-content{
