@@ -10,16 +10,20 @@ body{
 }
 .allpage{
     position: relative;
-    margin: 0 auto;
+    margin: 0 auto 64px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
 }
 .page{
+    border-radius: 8px;
+    overflow: hidden;
     position: relative;
-    width: 88%;
+    width: 80%;
     height: auto;
+    background-color: rgba(255, 255, 255, .5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
 }
 .page figure{
     position: relative;
@@ -34,20 +38,31 @@ body{
     height: 100%;
     object-fit: cover;
     transform: scale(1);
-    object-position: center top;
     transition: .5s;
 }
 .page figure img:hover{
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
-.page a{
+.page-detail{
+    margin-top: 16px;
+    font-size: 18px;
+    margin: 12px;
+}
+.page-detail + .page-detail{
+    margin-top: 8px;
+    font-size: 14px;
+}
+.page-detail a{
     text-decoration: none;
     color: black;
     font-weight: 500;
 }
-.page a::after{
+.page-detail a::after{
     content: attr(href);
-    color: blue;
+    color: #4D21FC;
+}
+.page-detail a:hover::after{
+    text-decoration: underline;
 }
 .index{
     position: fixed;
@@ -172,6 +187,12 @@ h1{
     margin: 32px 0;
     color: black;
 }
+.d-page::after{
+    content: "# Description";
+}
+.rule::after{
+    content: "# CSS Rules";
+}
 
 h1:hover{
     text-decoration: underline dotted currentColor;
@@ -181,6 +202,9 @@ h1:hover{
     .page{
         width: 56%;
     }
+    .allpage{
+        margin-bottom: 96px !important;
+    }
 }
 @media screen and (min-width: 1024px) {
     .allpage{
@@ -188,10 +212,13 @@ h1:hover{
         justify-content: center;
         gap: 48px;
         flex-direction: row;
-        align-items: start;
+        align-items: stretch;
     }
     .page{
         width: 40%;
+    }
+    .page-detail{
+        font-size: 20px;
     }
     h1{
         font-size: 40px;
@@ -210,6 +237,13 @@ h1:hover{
         transform: scale(1.04);
         box-shadow: 0 0 8px #414868;
     }
-    
+}
 
+@media screen and (min-width: 1700px) {
+    .page-detail{
+        font-size: 28px;
+    }
+    .page-detail + .page-detail{
+        font-size: 18px;
+    }
 }
